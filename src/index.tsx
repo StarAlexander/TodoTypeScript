@@ -1,3 +1,6 @@
 import React from "react";
 import ReactDOM from "react-dom"
-ReactDOM.render(<div>hello world</div>, document.getElementById("root"))
+import {createRoot} from "react-dom/client"
+import { App } from "./App";
+const root=createRoot(document.getElementById("root"))
+root.render(<App message="hello world" another="turning into a turtle"/>)
