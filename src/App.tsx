@@ -1,12 +1,17 @@
-import React from "react";
+import React,{useState} from "react";
 import { AppDiv,ChildDiv,StyledH } from "./styles";
 import { CheckBox } from "./CheckBox";
+import { Header } from "./Header";
+import { AddTodo } from "./AddTodo";
 
-type AppProps={
-    message:string,
-    another:string
-}
-export function App({message,another}:AppProps): JSX.Element {
-    return (<AppDiv><ChildDiv> <CheckBox/> <StyledH>{message}</StyledH></ChildDiv>
-    <ChildDiv><CheckBox/><StyledH>{another}</StyledH></ChildDiv></AppDiv>);
+
+export function App(): JSX.Element {
+    const [todos,setTodos]=useState(["Hello world","Turning"])
+    return (<div>
+        <Header/>
+        <AppDiv>{todos.map(todo=>(
+            <ChildDiv> <CheckBox/> <StyledH>{todo}</StyledH></ChildDiv>
+        ))}</AppDiv>
+    <AddTodo dispatch={setTodos}/>
+    </div>);
 }
