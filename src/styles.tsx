@@ -54,7 +54,20 @@ export const AddDiv=styled.div`
 export const StyledH=styled.p`
     position:relative;
     font-size:1.2rem;
-    left:25%;
+    left:3%;
+    width:6rem;
 
+
+`
+export const Delete=styled.button`
+    
+    position:relative;
+    width:3rem;
+    left:70%;
+    cursor:pointer;
+    transition: all 0.3s ease-in-out;
+    height:1.5rem;
+    border-radius:10px;
+    top:1rem;
 
 `
