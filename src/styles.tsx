@@ -68,6 +68,6 @@ export const Delete=styled.button`
     transition: all 0.3s ease-in-out;
     height:1.5rem;
     border-radius:10px;
-    top:1rem;
+    top:1.1rem;
 
 `
